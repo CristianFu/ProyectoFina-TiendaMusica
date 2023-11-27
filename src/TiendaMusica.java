@@ -66,7 +66,7 @@ public class TiendaMusica {
             System.out.println("***********************************************************");
             System.out.println("****************BIENVENODO PUESDES CONTINUAR****************");
             System.out.println("***********************************************************");
-            PruebaOperacionesCliente.mainOperacionesAdministrador();
+            PruebaOperacionesAdministrador.mainOperacionesAdministrador();
         }
     public static void cliente(){
         System.out.println("Estas entrando como cliente");

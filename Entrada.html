@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Música</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(89, 150, 179); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%; 
+        }
+
+        #instrument-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .instrument-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .instrument-image:hover {
+            transform: scale(1.1);
+        }
+
+        #enter-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 20px 40px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #enter-button:hover {
+            background-color: #297fb8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tienda de Música</h1>
+    </header>
+
+    <div id="instrument-container">
+        <img class="instrument-image" src="img/Guitar.jpg" alt=" ">
+        <img class="instrument-image" src="img/Au.jpg" alt=" ">
+        <img class="instrument-image" src="img/Ms.jpg" alt=" ">
+        <img class="instrument-image" src="img/As.jpeg" alt=" ">
+        <img class="instrument-image" src="img/Mu.jpg" alt=" ">
+        <img class="instrument-image" src="img/Sr.jpg" alt=" ">
+        <img class="instrument-image" src="img/Cr.jpg" alt=" ">
+        <img class="instrument-image" src="img/Mn.jpg" alt=" ">
+        <img class="instrument-image" src="img/Sd.jpg" alt=" ">
+
+
+    </div>
+
+    <button id="enter-button" onclick="openCatalog()">Entrar al Catálogo </button>
+
+    <script>
+        function openCatalog() {
+            window.location.href = 'canciones.html'; 
+        }
+    </script>
+</body>
+
+</html>

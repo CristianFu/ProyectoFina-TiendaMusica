@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ModoCliente",
+            "request": "launch",
+            "mainClass": "ModoCliente",
+            "projectName": "ProyectoFina-TiendaMusica_37c209ab"
+        },
+        {
+            "type": "java",
+            "name": "PruebaPaginaMuestras",
+            "request": "launch",
+            "mainClass": "PruebaPaginaMuestras",
+            "projectName": "ProyectoFina-TiendaMusica_37c209ab"
+        },
+        {
+            "type": "java",
+            "name": "PruebaPaginaWeb",
+            "request": "launch",
+            "mainClass": "PruebaPaginaWeb",
+            "projectName": "ProyectoFina-TiendaMusica_37c209ab"
+        },
+        {
+            "type": "java",
+            "name": "TiendaMusica",
+            "request": "launch",
+            "mainClass": "TiendaMusica",
+            "projectName": "ProyectoFina-TiendaMusica_37c209ab"
+        }
+    ]
+}
