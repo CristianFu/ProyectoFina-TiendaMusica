@@ -8,6 +8,7 @@ public class Cancion {
     private String archivo;
     private double precio;
 
+    // Constructor con parámetros
     public Cancion(int clave, String nombreCancion, String nombreCantante, String genero, String portada, String album, String archivo, double precio) {
         this.clave = clave;
         this.nombreCancion = nombreCancion;
@@ -19,9 +20,11 @@ public class Cancion {
         this.precio = precio;
     }
 
+    // Constructor vacío
     public Cancion() {
     }
 
+    // Métodos de acceso y modificación
     public int getClave() {
         return clave;
     }
@@ -86,20 +89,24 @@ public class Cancion {
         this.precio = precio;
     }
 
+    // Método para obtener el formato de archivo de la canción
     public String formatoArchivo() {
-        return clave + "|" + nombreCancion +
-                "|" + nombreCantante + "|" + genero + "|" +
-                portada + "|" + album + "|" + archivo + "|" + precio;
+        return clave + "|" + nombreCancion + "|" + nombreCantante + "|" + genero + "|" + portada + "|" + album + "|" + archivo + "|" + precio;
     }
 
+    // Método toString para representación de cadena de la canción
+    @Override
     public String toString() {
-        return "Cancion{" + " clave= " + clave +
-                " nombreCancion= '" + nombreCancion + '\'' + " nombreCantante= '" + nombreCantante + '\'' +
-                " ,genero= '" + genero + '\'' + " ,portada= '" + portada + '\'' + " ,album= '" + album + '\'' +
-                " ,archivo= '" + archivo + '\'' + " ,precio= '" + precio + '}';
+        return "Cancion{" +
+                "clave=" + clave +
+                ", nombreCancion='" + nombreCancion + '\'' +
+                ", nombreCantante='" + nombreCantante + '\'' +
+                ", genero='" + genero + '\'' +
+                ", portada='" + portada + '\'' +
+                ", album='" + album + '\'' +
+                ", archivo='" + archivo + '\'' +
+                ", precio=" + precio +
+                '}';
     }
 }
-
-
-
 

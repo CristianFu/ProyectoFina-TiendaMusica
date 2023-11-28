@@ -1,6 +1,9 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+
 public class ModoCliente {
     private static final Scanner entrada = new Scanner(System.in);
+    ArrayList<Cancion> listaCanciones;
 
     public static void main(String[] args) {
         int opcion;
@@ -28,7 +31,6 @@ public class ModoCliente {
         } while (opcion != 4);
     }
 
-    // Método para mostrar el menú al usuario
     private static void menu() {
         System.out.println("---------------------------------");
         System.out.println("Operaciones Clientes");
@@ -39,43 +41,34 @@ public class ModoCliente {
         System.out.println("Elige tu opción: ");
     }
 
-    // Método para abonar saldo a la cuenta
     public static void abonarSaldo() {
+        double nuevoSaldo;
         System.out.println("Dame la cantidad a abonar: ");
         double cantidad = entrada.nextDouble();
-        Globales.saldo = Globales.getSaldo() + cantidad;
-        System.out.println("Ahora el saldo es: " + Globales.saldo);
-        escribirNuevoSaldo(Globales.saldo);
+        nuevoSaldo = Globales.getSaldo() + cantidad;
+        System.out.println("Ahora el saldo es: " + nuevoSaldo);
+        Globales.escribirSaldo(nuevoSaldo);
+        return;
     }
 
-    // Método para comprar una canción y descontar el saldo
     public static void comprarCancion() {
-        double precioCancion = 20; // Precio simulado de la canción
+        double precioCancion = 20;
         if (Globales.getSaldo() >= precioCancion) {
             System.out.println("El precio de la canción es: " + precioCancion);
-            Globales.saldo = Globales.saldo - precioCancion;
-            System.out.println("Saldo después de comprar una canción: " + Globales.saldo);
-            escribirNuevoSaldo(Globales.saldo);
+            double nuevoSaldo = Globales.saldo - precioCancion;
+            System.out.println("Saldo después de comprar una canción: " + nuevoSaldo);
+            Globales.escribirSaldo(nuevoSaldo);
         } else {
             System.out.println("Saldo no suficiente");
         }
+        return;
     }
 
-    // Método para mostrar el saldo actual
     public static void verSaldo() {
         System.out.println("Saldo recuperado: " + Globales.getSaldo());
+        // Cambiar saldo
         Globales.saldo = Globales.getSaldo(); // Se sustituye por el valor del txt
         System.out.println("Saldo actual: " + Globales.saldo);
-    }
-
-    // Método para escribir el nuevo saldo en un archivo
-    private static void escribirNuevoSaldo(double nuevoSaldo) {
-        try {
-            java.io.PrintWriter salidaArchivo = new java.io.PrintWriter("Saldo.txt");
-            salidaArchivo.println(nuevoSaldo);
-            salidaArchivo.close();
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
+        return;
     }
 }

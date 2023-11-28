@@ -1,1 +1,14 @@
-1|Fuentes de Ortiz|Ed Maverick|Left|Fuentes De Ortiz.jpg|Ed Maverick|Ed Maverick  Fuentes De Ortiz.mp3|25.0
+1|Primal Scream|Motley Crue|Glam|DECADE.jpg|Decade of Decadence|Primal Scream.mp3|15.0
+2|Shout at he Devil|Motley Crue|Glam Rock|SHOUT.jpg|Shout at he Devil|Shout at the devil.mp3|20.0
+3|Saints of los Angeles|Motley Crue|Glam|SAINTS.jpg|Shout at he Devil|Saints of los Angeles.mp3|10.0
+4|Dr Feelgood|Motley Crue|Glam|DR.jpg|Dr Feelgood|Dr. Feelgood.mp3|20.0
+6|Shoot to Thrill|AC/DC|Rock|BACK.jpg|Back in Black|Shoot to Thrill.mp3|10.0
+7|Mátate Teté|Molotov|Rock|DONDELXS.jpg|¿Donde jugarán las niñas?|Matate Tete.mp3|20.0
+8|The Sky Is A Neighborhood|Foo Fighters|Rock|CONCRETE.jpg|Concrete and Gols|The Sky Is A Neighborhood.mp3|10.0
+9|I Love It Loud|Kiss|Hard Rock|CRIATURES.jpg|Criatures Of The Night|I Love It Loud.mp3|10.0
+10|For Whom The Bell Tolls|Metallica|Heavy Metal|RIDE.jpg|Ride The Lightning|For Whom The Bell Tolls.mp3|10.0
+11|At The Door|The Strokes|Indie Rock|THENEW.jpg|The New Abnormal|At The Door.mp3|15.0
+12|El Colmo|Babasonicos|Rock|DESDE.jpg|Desde Adentro.Impuesto De Fé|El Colmo.mp3|20.0
+13|Fuentes De Oritiz|Ed Maverick|Flork|Fuentes de Ortiz.jpg|Ed Maverick|Ed Maverick  Fuentes De Ortiz.mp3|25.0
+5|Yo soy|Cornelio Vega|Banda|Yo soy.jpg|Banda|Yo Soy.mp3|35.0
+14|Acurrucar|Ed Maverick|Left|Ed Maverick - Acurrucar.jpg|Ed Maverick|Ed Maverick  Acurrucar.mp3|25.0

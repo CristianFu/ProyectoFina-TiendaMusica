@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PruebaPaginaWebMuestras",
+            "request": "launch",
+            "mainClass": "PruebaPaginaWebMuestras",
+            "projectName": "ProyectoFina-TiendaMusica_37c209ab"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

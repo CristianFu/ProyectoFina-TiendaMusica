@@ -2,20 +2,22 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+
 public class PruebaOperacionesAdministrador {
-    static Catalogo catalogoTienda = new Catalogo();
-    static Scanner entrada = new Scanner(System.in);
-    static Archivo archivox = new Archivo("CANCIONEX.txt");
+    private static final Catalogo catalogoTienda = new Catalogo();
+    private static final Scanner entrada = new Scanner(System.in);
+    private static final Archivo archivox = new Archivo("CANCIONEX.txt");
 
     public static void mainOperacionesAdministrador() {
-        catalogoTienda.setlistaCanciones(archivox.leerDeArchivo());
+        catalogoTienda.setListaCanciones(archivox.leerDeArchivo());
         mostrarCanciones();
-        int opcion,indice;
-        int clave;
+        int opcion;
+
         do {
             menu();
             opcion = entrada.nextInt();
             entrada.nextLine();
+
             switch (opcion) {
                 case 1:
                     pedirDatosCancion();
@@ -26,7 +28,7 @@ public class PruebaOperacionesAdministrador {
                     mostrarCanciones();
                     break;
                 case 3:
-                   buscarCancion();
+                    buscarCancion();
                     break;
                 case 4:
                     borrarCancion();
@@ -34,12 +36,14 @@ public class PruebaOperacionesAdministrador {
                     mostrarCanciones();
                     break;
                 case 5:
-                   cambiarNombreCancion();
-                   archivox.escribirEnArchivo(catalogoTienda.getListaCanciones());
-                   mostrarCanciones();
+                    cambiarNombreCancion();
+                    archivox.escribirEnArchivo(catalogoTienda.getListaCanciones());
+                    mostrarCanciones();
                     break;
                 case 6:
-
+                    cambiarPrecioCancion();
+                    archivox.escribirEnArchivo(catalogoTienda.getListaCanciones());
+                    mostrarCanciones();
                     break;
                 case 7:
                     verPaginaWebCatalogoCompleto();
@@ -50,24 +54,27 @@ public class PruebaOperacionesAdministrador {
                 default:
                     System.out.println("No válido");
                     break;
-            }//fin de switch
+            }
         } while (opcion != 8);
     }
 
+    private static void cambiarPrecioCancion() {
+    }
+
     private static void menu() {
-        System.out.println("-------------------------------------------------" +
-                "-------------------------");
+        System.out.println("---------------------------------------------------");
         System.out.println("Operaciones sobre canciones:");
-        System.out.println("1.-Añadir una cancion a la lista");
-        System.out.println("2.-Mostrar lista de canciones");
-        System.out.println("3.-Buscar cancion por clave");
-        System.out.println("4.-Borrar una cancion");
-        System.out.println("5.-Cambiar el nombre de una cancion");
-        System.out.println("6.-Cambiar el precio");
-        System.out.println("7.-Ver pagina web del catalogo");
-        System.out.println("8.-Salir");
-        System.out.println("Elige tu opcion:");
-    }//Fin menu
+        System.out.println("1.- Añadir una canción a la lista");
+        System.out.println("2.- Mostrar lista de canciones");
+        System.out.println("3.- Buscar canción por clave");
+        System.out.println("4.- Borrar una canción");
+        System.out.println("5.- Cambiar el nombre de una canción");
+        System.out.println("6.- Cambiar el precio");
+        System.out.println("7.- Ver página web del catálogo");
+        System.out.println("8.- Salir");
+        System.out.print("Elige tu opción: ");
+    }
+    
     public static void pedirDatosCancion () {
         int clave, indice;
         System.out.println("Dime la clave de la cancion:");
@@ -160,3 +167,4 @@ public class PruebaOperacionesAdministrador {
         }
     }
 }
+

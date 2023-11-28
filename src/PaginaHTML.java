@@ -5,8 +5,6 @@ public class PaginaHTML {
     private String nombrePagina;
     private Archivo archivox = new Archivo("cancionex.txt");
     private ArrayList<Cancion> listaCanciones;
-    private String backgroundColor = "#69ed9c";  // Color de fondo predeterminado
-    private String textColor = "#111111";  // Color de texto predeterminado
 
     public PaginaHTML(String nombreA) {
         this.nombrePagina = nombreA;
@@ -20,29 +18,13 @@ public class PaginaHTML {
                 "<head>",
                 "<meta charset='UTF-8'>",
                 "<title>Catalogo Musica</title>",
-                "<link href='css/bootstrap.min.css'",
-                "rel='stylesheet'type='text/css'>",
+                "<link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>",
                 "<style>",
-                "body {",
-                "background-color: " + backgroundColor + ";",
-                "color: " + textColor + ";",
-                "font-family: 'Arial', sans-serif;",
+                "#cuerpo {",
+                "  margin: 100px;",
                 "}",
-                "#cuerpo{",
-                "margin:100px;",
-                "}",
-                "h1 {",
-                "color: #fff;",
-                "font-family: 'Impact', sans-serif;",
-                "}",
-                "th {",
-                "background-color: #333;",
-                "}",
-                "tbody tr:nth-child(odd) {",
-                "background-color: #555;",
-                "}",
-                "tbody tr:nth-child(even) {",
-                "background-color: #444;",
+                ".table-striped tbody tr:nth-child(odd) {",
+                "  background-color: #f2f2f2; ",
                 "}",
                 "</style>",
                 "</head>",
@@ -65,16 +47,16 @@ public class PaginaHTML {
                     "<tr>" +
                             "<td>" +
                             "<img src='img/" + aux.getPortada() +
-                            "'width='50' height='50' alt=''>" +
+                            "' width='50' height='50' alt=''>" +
                             "</td>" +
                             "<td>" +
-                            "<audio src='audio/" + aux.getArchivo() + "'controls>" +
+                            "<audio src='audio/" + aux.getArchivo() + "' controls>" +
                             "</audio>" +
                             "</td>" +
                             "<td>" + aux.getNombreCancion() + "</td>" +
                             "<td>" + aux.getNombreCantante() + "</td>" +
                             "<td>$" + aux.getPrecio() + "</td>" +
-                            "</td>";
+                            "</tr>";
         }
 
         String tablaCanciones = String.join("\n",
@@ -83,7 +65,7 @@ public class PaginaHTML {
                 "<tr>",
                 "<th>Caratula</th>",
                 "<th>Audio</th>",
-                "<th>Nombre de la canción</th>",
+                "<th>Nombre de la cancion</th>",
                 "<th>Artista</th>",
                 "<th>Precio</th>",
                 "</tr>",
@@ -96,16 +78,10 @@ public class PaginaHTML {
 
         try {
             PrintWriter salidaArchivo = new PrintWriter(nombrePagina);
-
             salidaArchivo.println(primeraParte + tablaCanciones + ultimaParte);
             salidaArchivo.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public void guardarEstilos(String backgroundColor, String textColor) {
-        this.backgroundColor = backgroundColor;
-        this.textColor = textColor;
     }
 }
